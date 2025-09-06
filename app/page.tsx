@@ -774,216 +774,216 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
   ]
 
   return (
-   <div className="min-h-screen bg-white">
-  {/* Header */}
-  <header className="bg-[#1b1c44] text-white relative">
-    <div className="container mx-auto px-3 py-2 flex items-center justify-between">
-      <div className="flex items-center space-x-2 md:space-x-6">
-        <div className="flex items-center space-x-2">
-          <div className="relative flex-shrink-0" style={{ width: '140px', height: '40px' }}>
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="bg-[#1b1c44] text-white relative">
+        <div className="container mx-auto px-1 py-1 flex items-center justify-between">
+          <div className="flex items-center space-x-2 md:space-x-8">
+            <div className="flex items-center space-x-2">
+             <div className="relative flex-shrink-0" style={{ width: '190px', height: '100px',marginRight: '0px' }}>
             <img
               src="/images/Cyvica_Logo_Transparent.png"
               alt="CYVICA Logo"
               className="w-full h-full object-contain filter brightness-0 invert"  
             />
           </div>
-          <span className="text-lg font-bold hidden sm:block">CYVICA TECHNOLOGY</span>
+              <span className="text-xl font-bold">CYVICA TECHNOLOGY</span>
+            </div>
+            <nav className="hidden lg:flex space-x-6 text-sm">
+              {/* Products Dropdown */}
+              <div className="relative nav-item">
+                <div 
+                  onClick={() => toggleDropdown('products')}
+                  className="hover:text-blue-400 py-2 cursor-pointer flex items-center"
+                >
+                  Products & solutions
+                  <svg 
+                    className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'products' ? 'rotate-180' : ''}`} 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <ProductsDropdownMenu isActive={activeDropdown === 'products'} />
+              </div>
+
+              {/* Partners Dropdown */}
+              <div className="relative nav-item">
+                <div 
+                  onClick={() => toggleDropdown('partners')}
+                  className="hover:text-blue-400 py-2 cursor-pointer flex items-center"
+                >
+                  For partners
+                  <svg 
+                    className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'partners' ? 'rotate-180' : ''}`} 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <PartnersDropdownMenu isActive={activeDropdown === 'partners'} />
+              </div>
+
+              {/* Helpdesk Dropdown */}
+              <div className="relative nav-item">
+                <div 
+                  onClick={() => toggleDropdown('helpdesk')}
+                  className="hover:text-blue-400 py-2 cursor-pointer flex items-center"
+                >
+                  Helpdesk
+                  <svg 
+                    className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'helpdesk' ? 'rotate-180' : ''}`} 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                <HelpdeskDropdownMenu isActive={activeDropdown === 'helpdesk'} />
+              </div>
+
+              
+              {/* About Dropdown */}
+<div className="relative nav-item">
+  <div 
+    onClick={() => toggleDropdown('about')}
+    className="hover:text-blue-400 py-2 cursor-pointer flex items-center"
+  >
+    About CYVICA
+    <svg 
+      className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'about' ? 'rotate-180' : ''}`} 
+      fill="none" 
+      viewBox="0 0 24 24" 
+      stroke="currentColor"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+  <AboutDropdownMenu isActive={activeDropdown === 'about'} />
+</div>
+
+            </nav>
+          </div>
+          
+          <div className="flex items-center space-x-2 md:space-x-4 text-sm">
+            <button
+              onClick={toggleSearch}
+              className="hover:text-blue-400 p-2 rounded-full hover:bg-blue-700/20 transition-colors"
+              aria-label="Search"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+            <button className="hover:text-blue-400 hidden sm:block">Contact</button>
+            <button className="hover:text-blue-400 hidden sm:block border border-white px-3 py-1 rounded">
+              Log in
+            </button>
+            <Button className="bg-[#e74c3c] hover:bg-[#c0392b] text-white px-3 md:px-4 py-2 rounded text-xs md:text-sm font-medium">
+              Sign up
+            </Button>
+            <button
+              className="lg:hidden flex flex-col space-y-1 p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              <div
+                className={`w-5 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""}`}
+              ></div>
+              <div
+                className={`w-5 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? "opacity-0" : ''}`}
+              ></div>
+              <div
+                className={`w-5 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""}`}
+              ></div>
+            </button>
+          </div>
         </div>
-        
-        <nav className="hidden lg:flex space-x-4 text-sm">
-          {/* Products Dropdown */}
-          <div className="relative nav-item">
-            <div 
-              onClick={() => toggleDropdown('products')}
-              className="hover:text-blue-400 py-1 cursor-pointer flex items-center whitespace-nowrap"
-            >
-              Products & solutions
-              <svg 
-                className={`ml-1 h-3 w-3 transition-transform ${activeDropdown === 'products' ? 'rotate-180' : ''}`}
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-            <ProductsDropdownMenu isActive={activeDropdown === 'products'} />
-          </div>
 
-          {/* Partners Dropdown */}
-          <div className="relative nav-item">
-            <div 
-              onClick={() => toggleDropdown('partners')}
-              className="hover:text-blue-400 py-1 cursor-pointer flex items-center whitespace-nowrap"
-            >
-              For partners
-              <svg 
-                className={`ml-1 h-3 w-3 transition-transform ${activeDropdown === 'partners' ? 'rotate-180' : ''}`}
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-            <PartnersDropdownMenu isActive={activeDropdown === 'partners'} />
-          </div>
 
-          {/* Helpdesk Dropdown */}
-          <div className="relative nav-item">
-            <div 
-              onClick={() => toggleDropdown('helpdesk')}
-              className="hover:text-blue-400 py-1 cursor-pointer flex items-center whitespace-nowrap"
-            >
-              Helpdesk
-              <svg 
-                className={`ml-1 h-3 w-3 transition-transform ${activeDropdown === 'helpdesk' ? 'rotate-180' : ''}`}
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
+        {isSearchOpen && (
+          <div className="absolute top-0 right-0 h-full bg-[#000080] border-l border-blue-700 z-50 w-80 max-w-[90vw]">
+            <div className="flex items-center h-full px-4">
+              <div className="flex-1 flex items-center space-x-3">
+                <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="flex-1 bg-transparent text-white placeholder-gray-300 border-none outline-none text-sm"
+                  autoFocus
+                />
+              </div>
+              <button
+                onClick={toggleSearch}
+                className="ml-3 p-2 hover:bg-blue-700/20 rounded-full transition-colors"
+                aria-label="Close search"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
-            <HelpdeskDropdownMenu isActive={activeDropdown === 'helpdesk'} />
           </div>
+        )}
 
-          {/* About Dropdown */}
-          <div className="relative nav-item">
-            <div 
-              onClick={() => toggleDropdown('about')}
-              className="hover:text-blue-400 py-1 cursor-pointer flex items-center whitespace-nowrap"
-            >
-              About CYVICA
-              <svg 
-                className={`ml-1 h-3 w-3 transition-transform ${activeDropdown === 'about' ? 'rotate-180' : ''}`}
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-            <AboutDropdownMenu isActive={activeDropdown === 'about'} />
-          </div>
-        </nav>
-      </div>
-      
-      {/* Right side buttons - Moved closer to nav items */}
-      <div className="flex items-center space-x-2 text-sm">
-        <button
-          onClick={toggleSearch}
-          className="hover:text-blue-400 p-1 rounded-full hover:bg-blue-700/20 transition-colors"
-          aria-label="Search"
-        >
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </button>
-        <button className="hover:text-blue-400 hidden sm:block text-xs">Contact</button>
-        <button className="hover:text-blue-400 hidden sm:block border border-white px-2 py-0.5 rounded text-xs">
-          Log in
-        </button>
-        <Button className="bg-[#e74c3c] hover:bg-[#c0392b] text-white px-2 md:px-3 py-1 rounded text-xs font-medium">
-          Sign up
-        </Button>
-        <button
-          className="lg:hidden flex flex-col space-y-0.5 p-1"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-        >
-          <div
-            className={`w-4 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? "rotate-45 translate-y-1" : ""}`}
-          ></div>
-          <div
-            className={`w-4 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? "opacity-0" : ''}`}
-          ></div>
-          <div
-            className={`w-4 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? "-rotate-45 -translate-y-1" : ""}`}
-          ></div>
-        </button>
-      </div>
-    </div>
-
-    {/* Keep the rest of your code for search and mobile menu */}
-    {isSearchOpen && (
-      <div className="absolute top-0 right-0 h-full bg-[#000080] border-l border-blue-700 z-50 w-80 max-w-[90vw]">
-        <div className="flex items-center h-full px-4">
-          <div className="flex-1 flex items-center space-x-3">
-            <svg className="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+        {isMobileMenuOpen && (
+          <div className="lg:hidden bg-[#000080] border-t border-blue-700">
+            <nav className="container mx-auto px-4 py-4 space-y-3">
+              <MobileDropdownMenu 
+                data={{ title: "Products & solutions" }} 
+                isActive={activeDropdown === 'products-mobile'} 
+                onToggle={() => toggleDropdown('products-mobile')} 
               />
-            </svg>
-            <input
-              type="text"
-              placeholder="Search..."
-              className="flex-1 bg-transparent text-white placeholder-gray-300 border-none outline-none text-xs"
-              autoFocus
-            />
+              
+              <MobileDropdownMenu 
+                data={{ title: "For partners" }} 
+                isActive={activeDropdown === 'partners-mobile'} 
+                onToggle={() => toggleDropdown('partners-mobile')} 
+              />
+              
+              <MobileDropdownMenu 
+                data={{ title: "Helpdesk" }} 
+                isActive={activeDropdown === 'helpdesk-mobile'} 
+                onToggle={() => toggleDropdown('helpdesk-mobile')} 
+              />
+              
+              <MobileDropdownMenu 
+                data={{ title: "About Sherweb" }} 
+                isActive={activeDropdown === 'about-mobile'} 
+                onToggle={() => toggleDropdown('about-mobile')} 
+              />
+              
+              <div className="pt-3 border-t border-blue-700 space-y-2">
+                <button className="block text-white hover:text-blue-400 py-2">Contact</button>
+                <button className="block text-white hover:text-blue-400 py-2">Log in</button>
+              </div>
+            </nav>
           </div>
-          <button
-            onClick={toggleSearch}
-            className="ml-3 p-1 hover:bg-blue-700/20 rounded-full transition-colors"
-            aria-label="Close search"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    )}
-
-    {isMobileMenuOpen && (
-      <div className="lg:hidden bg-[#000080] border-t border-blue-700">
-        <nav className="container mx-auto px-3 py-2 space-y-2">
-          <MobileDropdownMenu 
-            data={{ title: "Products & solutions" }} 
-            isActive={activeDropdown === 'products-mobile'} 
-            onToggle={() => toggleDropdown('products-mobile')} 
-          />
-          
-          <MobileDropdownMenu 
-            data={{ title: "For partners" }} 
-            isActive={activeDropdown === 'partners-mobile'} 
-            onToggle={() => toggleDropdown('partners-mobile')} 
-          />
-          
-          <MobileDropdownMenu 
-            data={{ title: "Helpdesk" }} 
-            isActive={activeDropdown === 'helpdesk-mobile'} 
-            onToggle={() => toggleDropdown('helpdesk-mobile')} 
-          />
-          
-          <MobileDropdownMenu 
-            data={{ title: "About CYVICA" }} 
-            isActive={activeDropdown === 'about-mobile'} 
-            onToggle={() => toggleDropdown('about-mobile')} 
-          />
-          
-          <div className="pt-2 border-t border-blue-700 space-y-1">
-            <button className="block text-white hover:text-blue-400 py-1 text-sm">Contact</button>
-            <button className="block text-white hover:text-blue-400 py-1 text-sm">Log in</button>
-          </div>
-        </nav>
-      </div>
-    )}
-  </header>
+        )}
+      </header>
 
       
       {/* Hero Section */}
