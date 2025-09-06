@@ -789,12 +789,12 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
           </div>
               <span className="text-xl font-bold">CYVICA TECHNOLOGY</span>
             </div>
-            <nav className="hidden lg:flex space-x-20 text-sm">
+            <nav className="hidden lg:flex space-x-6 text-sm">
               {/* Products Dropdown */}
               <div className="relative nav-item">
                 <div 
                   onClick={() => toggleDropdown('products')}
-                  className="hover:text-blue-400 py-2 cursor-pointer flex items-center"
+                  className="hover:text-blue-400 py-4 cursor-pointer flex items-center"
                 >
                   Products & solutions
                   <svg 
