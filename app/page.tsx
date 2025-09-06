@@ -777,19 +777,18 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-[#1b1c44] text-white relative">
-    <div className="container mx-auto px-3 py-2 flex items-center justify-between"> {/* Reduced padding */}
-      <div className="flex items-center space-x-2 md:space-x-6">
-        <div className="flex items-center space-x-2">
-          {/* Logo container with optimized size */}
-          <div className="relative flex-shrink-0" style={{ width: '140px', height: '90px' }}>
+        <div className="container mx-auto px-1 py-1 flex items-center justify-between">
+          <div className="flex items-center space-x-2 md:space-x-8">
+            <div className="flex items-center space-x-2">
+             <div className="relative flex-shrink-0" style={{ width: '190px', height: '100px',marginRight: '0px' }}>
             <img
               src="/images/Cyvica_Logo_Transparent.png"
               alt="CYVICA Logo"
               className="w-full h-full object-contain filter brightness-0 invert"  
             />
           </div>
-          <span className="text-lg font-bold hidden sm:block">CYVICA TECHNOLOGY</span> {/* Slightly smaller text */}
-        </div>
+              <span className="text-xl font-bold">CYVICA TECHNOLOGY</span>
+            </div>
             <nav className="hidden lg:flex space-x-6 text-sm">
               {/* Products Dropdown */}
               <div className="relative nav-item">
