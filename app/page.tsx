@@ -778,7 +778,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
       {/* Header */}
       <header className="bg-[#1b1c44] text-white relative">
         <div className="container mx-auto px-2 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-4 md:space-x-8">
+          <div className="flex items-center space-x-2 md:space-x-8">
             <div className="flex items-center space-x-2">
              <div className="relative flex-shrink-0" style={{ width: '190px', height: '100px',marginRight: '0px' }}>
             <img
