@@ -1,7 +1,9 @@
 "use client"
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
 import { useState, useRef, useEffect } from "react"
+import logo from './Cyvica_Logo_Transparent.png';
+import Image from 'next/image';
+import { url } from "inspector";
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -180,7 +182,7 @@ export default function Home() {
     <div 
       className="absolute top-full left-0 mt-2 w-[900px] bg-white rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden animate-fadeIn"
       ref={dropdownRef}
-      style={{left: '50%', transform: 'translateX(-20%)', maxHeight: '500px', overflowY: 'auto'}}
+      style={{left: '-20%', transform: 'translateX(-20%)', maxHeight: '500px', overflowY: 'auto'}}
     >
       <div className="p-8 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="flex justify-between items-start">
@@ -265,7 +267,7 @@ const PartnersDropdownMenu = ({ isActive }: { isActive: boolean }) => {
     <div 
       className="absolute top-full left-0 mt-2 w-[900px] bg-white rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden animate-fadeIn"
       ref={dropdownRef}
-      style={{left: '50%', transform: 'translateX(-20%)', maxHeight: '500px', overflowY: 'auto'}}
+      style={{left: '-100%', transform: 'translateX(-20%)', maxHeight: '500px', overflowY: 'auto'}}
     >
       <div className="p-8 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="flex justify-between items-start">
@@ -373,7 +375,7 @@ const HelpdeskDropdownMenu = ({ isActive }: { isActive: boolean }) => {
     <div 
       className="absolute top-full left-0 mt-2 w-[900px] bg-white rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden animate-fadeIn"
       ref={dropdownRef}
-      style={{left: '0%', transform: 'translateX(-20%)', maxHeight: '500px', overflowY: 'auto'}}
+      style={{left: '-200%', transform: 'translateX(-20%)', maxHeight: '500px', overflowY: 'auto'}}
     >
       <div className="p-8 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="flex justify-between items-start">
@@ -484,7 +486,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
     <div 
       className="absolute top-full left-0 mt-2 w-[900px] bg-white rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden animate-fadeIn"
       ref={dropdownRef}
-      style={{left: '-100%', transform: 'translateX(-20%)', maxHeight: '500px', overflowY: 'auto'}}
+      style={{left: '-250%', transform: 'translateX(-20%)', maxHeight: '500px', overflowY: 'auto'}}
     >
       <div className="p-8 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="flex justify-between items-start">
@@ -775,10 +777,16 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-[#1b1c44] text-white relative">
-        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center space-x-4 md:space-x-8">
+        <div className="container mx-auto px-1 py-1 flex items-center justify-between">
+          <div className="flex items-center space-x-2 md:space-x-8">
             <div className="flex items-center space-x-2">
-              <div className="w-6 h-6 bg-[#3498db] rounded-sm"></div>
+             <div className="relative flex-shrink-0" style={{ width: '190px', height: '100px',marginRight: '0px' }}>
+            <img
+              src="/images/Cyvica_Logo_Transparent.png"
+              alt="CYVICA Logo"
+              className="w-full h-full object-contain filter brightness-0 invert"  
+            />
+          </div>
               <span className="text-xl font-bold">CYVICA TECHNOLOGY</span>
             </div>
             <nav className="hidden lg:flex space-x-6 text-sm">
