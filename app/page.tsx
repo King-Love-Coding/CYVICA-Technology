@@ -781,7 +781,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
       <div className="flex items-center space-x-2 md:space-x-6">
         <div className="flex items-center space-x-2">
           {/* Logo container with optimized size */}
-          <div className="relative flex-shrink-0" style={{ width: '140px', height: '40px' }}>
+          <div className="relative flex-shrink-0" style={{ width: '140px', height: '90px' }}>
             <img
               src="/images/Cyvica_Logo_Transparent.png"
               alt="CYVICA Logo"
