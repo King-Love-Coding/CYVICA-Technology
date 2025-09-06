@@ -789,7 +789,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
           </div>
               <span className="text-xl font-bold">CYVICA TECHNOLOGY</span>
             </div>
-            <nav className="hidden lg:flex space-x-10 text-sm">
+            <nav className="hidden lg:flex space-x-20 text-sm">
               {/* Products Dropdown */}
               <div className="relative nav-item">
                 <div 
