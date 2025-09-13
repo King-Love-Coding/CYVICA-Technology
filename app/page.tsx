@@ -619,8 +619,32 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
     )
   }
 
+   const [mobileDropdowns, setMobileDropdowns] = useState({
+    products: false,
+    partners: false,
+    helpdesk: false,
+    about: false,
+  })
+  
   // Mobile Dropdown Component
-  const MobileDropdownMenu = ({ data, isActive, onToggle }: { data: any, isActive: boolean, onToggle: () => void }) => {
+   const toggleMobileDropdown = (dropdown: keyof typeof mobileDropdowns) => {
+    setMobileDropdowns((prev) => ({
+      ...prev,
+      [dropdown]: !prev[dropdown],
+    }))
+  }
+
+   const MobileDropdownMenu = ({ 
+    data, 
+    isActive, 
+    onToggle,
+    content 
+  }: { 
+    data: any, 
+    isActive: boolean, 
+    onToggle: () => void,
+    content: React.ReactNode
+  }) => {
     return (
       <div className="lg:hidden">
         <button 
@@ -640,25 +664,131 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
         
         {isActive && (
           <div className="ml-4 pl-2 border-l-2 border-blue-500/30 mb-4 animate-fadeIn">
-            <div className="space-y-2">
-              <a href="#" className="text-white/80 hover:text-white transition-colors block py-1 pl-4">
-                Option 1
-              </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors block py-1 pl-4">
-                Option 2
-              </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors block py-1 pl-4">
-                Option 3
-              </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors block py-1 pl-4">
-                Option 4
-              </a>
-            </div>
+            {content}
           </div>
         )}
       </div>
     )
   }
+
+  // Mobile Products Dropdown Content
+  const MobileProductsContent = () => (
+    <div className="space-y-4 py-2">
+      {productCategories.map((category, index) => (
+        <div key={index}>
+          <button 
+            className="text-white/80 hover:text-white transition-colors flex items-center justify-between w-full py-2 pl-4"
+            onClick={() => toggleMobileDropdown(`products-${index}` as any)}
+          >
+            <span>{category.title}</span>
+            <svg 
+              className={`w-4 h-4 transition-transform duration-300 ${mobileDropdowns[`products-${index}` as keyof typeof mobileDropdowns] ? 'rotate-180' : ''}`} 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          {mobileDropdowns[`products-${index}` as keyof typeof mobileDropdowns] && (
+            <div className="ml-4 pl-2 border-l-2 border-blue-500/20 mt-2">
+              <ul className="space-y-2">
+                {category.items.map((item, itemIndex) => (
+                  <li key={itemIndex}>
+                    <a href="#" className="text-white/70 hover:text-white transition-colors block py-1 pl-4 text-sm">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  )
+
+  // Mobile Partners Dropdown Content
+  const MobilePartnersContent = () => (
+    <div className="space-y-4 py-2">
+      {partnerCategories.map((category, index) => (
+        <div key={index}>
+          <button 
+            className="text-white/80 hover:text-white transition-colors flex items-center justify-between w-full py-2 pl-4"
+            onClick={() => toggleMobileDropdown(`partners-${index}` as any)}
+          >
+            <span>{category.title}</span>
+            <svg 
+              className={`w-4 h-4 transition-transform duration-300 ${mobileDropdowns[`partners-${index}` as keyof typeof mobileDropdowns] ? 'rotate-180' : ''}`} 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          {mobileDropdowns[`partners-${index}` as keyof typeof mobileDropdowns] && (
+            <div className="ml-4 pl-2 border-l-2 border-blue-500/20 mt-2">
+              <ul className="space-y-2">
+                {category.items.map((item, itemIndex) => (
+                  <li key={itemIndex}>
+                    <a href="#" className="text-white/70 hover:text-white transition-colors block py-1 pl-4 text-sm">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  )
+
+  // Mobile Helpdesk Dropdown Content
+  const MobileHelpdeskContent = () => (
+    <div className="space-y-3 py-2">
+      <a href="#" className="text-white/80 hover:text-white transition-colors block py-2 pl-4">
+        Resource center
+      </a>
+      <a href="#" className="text-white/80 hover:text-white transition-colors block py-2 pl-4">
+        Network status
+      </a>
+      <a href="#" className="text-white/80 hover:text-white transition-colors block py-2 pl-4">
+        Support request
+      </a>
+      <a href="#" className="text-white/80 hover:text-white transition-colors block py-2 pl-4">
+        VoIP connection test
+      </a>
+    </div>
+  )
+
+  // Mobile About Dropdown Content
+  const MobileAboutContent = () => (
+    <div className="space-y-3 py-2">
+      <a href="#" className="text-white/80 hover:text-white transition-colors block py-2 pl-4">
+        About us
+      </a>
+      <a href="#" className="text-white/80 hover:text-white transition-colors block py-2 pl-4">
+        News
+      </a>
+      <a href="#" className="text-white/80 hover:text-white transition-colors block py-2 pl-4">
+        Awards
+      </a>
+      <a href="#" className="text-white/80 hover:text-white transition-colors block py-2 pl-4">
+        Legal
+      </a>
+      <a href="#" className="text-white/80 hover:text-white transition-colors block py-2 pl-4">
+        Careers
+      </a>
+      <a href="#" className="text-white/80 hover:text-white transition-colors block py-2 pl-4">
+        Contact us
+      </a>
+    </div>
+  )
+
 
   const partners = [
     {
@@ -854,7 +984,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
     onClick={() => toggleDropdown('about')}
     className="hover:text-blue-400 py-2 cursor-pointer flex items-center"
   >
-    About CYVICA
+    About Cyvica
     <svg 
       className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'about' ? 'rotate-180' : ''}`} 
       fill="none" 
@@ -949,31 +1079,35 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
           </div>
         )}
 
-        {isMobileMenuOpen && (
+         {isMobileMenuOpen && (
           <div className="lg:hidden bg-[#000080] border-t border-blue-700">
             <nav className="container mx-auto px-4 py-4 space-y-3">
               <MobileDropdownMenu 
                 data={{ title: "Products & solutions" }} 
-                isActive={activeDropdown === 'products-mobile'} 
-                onToggle={() => toggleDropdown('products-mobile')} 
+                isActive={mobileDropdowns.products} 
+                onToggle={() => toggleMobileDropdown('products')}
+                content={<MobileProductsContent />}
               />
               
               <MobileDropdownMenu 
                 data={{ title: "For partners" }} 
-                isActive={activeDropdown === 'partners-mobile'} 
-                onToggle={() => toggleDropdown('partners-mobile')} 
+                isActive={mobileDropdowns.partners} 
+                onToggle={() => toggleMobileDropdown('partners')}
+                content={<MobilePartnersContent />}
               />
               
               <MobileDropdownMenu 
                 data={{ title: "Helpdesk" }} 
-                isActive={activeDropdown === 'helpdesk-mobile'} 
-                onToggle={() => toggleDropdown('helpdesk-mobile')} 
+                isActive={mobileDropdowns.helpdesk} 
+                onToggle={() => toggleMobileDropdown('helpdesk')}
+                content={<MobileHelpdeskContent />}
               />
               
               <MobileDropdownMenu 
-                data={{ title: "About Sherweb" }} 
-                isActive={activeDropdown === 'about-mobile'} 
-                onToggle={() => toggleDropdown('about-mobile')} 
+                data={{ title: "About Cyvica" }} 
+                isActive={mobileDropdowns.about} 
+                onToggle={() => toggleMobileDropdown('about')}
+                content={<MobileAboutContent />}
               />
               
               <div className="pt-3 border-t border-blue-700 space-y-2">
