@@ -1080,7 +1080,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
         )}
 
          {isMobileMenuOpen && (
-  <div className="lg:hidden bg-[#000080] border-t border-blue-700 absolute left-0 right-0 z-50">
+  <div className="lg:hidden bg-[#000080] border-t border-blue-700 w-full fixed top-[84px] left-0 right-0 bottom-0 z-[500] overflow-y-auto">
     <nav className="px-4 py-4 space-y-3">
       <MobileDropdownMenu 
         data={{ title: "Products & solutions" }} 
