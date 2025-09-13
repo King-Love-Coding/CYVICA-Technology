@@ -906,7 +906,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-[#1b1c44] text-white relative">
+      <header className="bg-[#1b1c44] text-white relative z-50">
         <div className="container mx-auto px-2 py-3 flex items-center justify-between">
           <div className="flex items-center space-x-4 md:space-x-8">
             <div className="flex items-center space-x-2">
@@ -1029,7 +1029,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
               Sign up
             </Button>
             <button
-              className="lg:hidden flex flex-col space-y-1 p-2"
+              className="flex flex-col space-y-1 p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
             >
@@ -1079,8 +1079,8 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
           </div>
         )}
 
-         {isMobileMenuOpen && (
-  <div className="lg:hidden bg-[#000080] border-t border-blue-700 w-full fixed top-[84px] left-0 right-0 bottom-0 z-[500] overflow-y-auto">
+        {isMobileMenuOpen && (
+  <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-[#000080] z-50 pt-16 overflow-y-auto">
     <nav className="px-4 py-4 space-y-3">
       <MobileDropdownMenu 
         data={{ title: "Products & solutions" }} 
@@ -1117,6 +1117,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
     </nav>
   </div>
 )}
+
       </header>
 
       
