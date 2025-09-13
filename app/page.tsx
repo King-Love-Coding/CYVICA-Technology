@@ -625,7 +625,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
     helpdesk: false,
     about: false,
   })
-  
+
   // Mobile Dropdown Component
    const toggleMobileDropdown = (dropdown: keyof typeof mobileDropdowns) => {
     setMobileDropdowns((prev) => ({
@@ -1080,43 +1080,43 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
         )}
 
          {isMobileMenuOpen && (
-          <div className="lg:hidden bg-[#000080] border-t border-blue-700">
-            <nav className="container mx-auto px-4 py-4 space-y-3">
-              <MobileDropdownMenu 
-                data={{ title: "Products & solutions" }} 
-                isActive={mobileDropdowns.products} 
-                onToggle={() => toggleMobileDropdown('products')}
-                content={<MobileProductsContent />}
-              />
-              
-              <MobileDropdownMenu 
-                data={{ title: "For partners" }} 
-                isActive={mobileDropdowns.partners} 
-                onToggle={() => toggleMobileDropdown('partners')}
-                content={<MobilePartnersContent />}
-              />
-              
-              <MobileDropdownMenu 
-                data={{ title: "Helpdesk" }} 
-                isActive={mobileDropdowns.helpdesk} 
-                onToggle={() => toggleMobileDropdown('helpdesk')}
-                content={<MobileHelpdeskContent />}
-              />
-              
-              <MobileDropdownMenu 
-                data={{ title: "About Cyvica" }} 
-                isActive={mobileDropdowns.about} 
-                onToggle={() => toggleMobileDropdown('about')}
-                content={<MobileAboutContent />}
-              />
-              
-              <div className="pt-3 border-t border-blue-700 space-y-2">
-                <button className="block text-white hover:text-blue-400 py-2">Contact</button>
-                <button className="block text-white hover:text-blue-400 py-2">Log in</button>
-              </div>
-            </nav>
-          </div>
-        )}
+  <div className="lg:hidden bg-[#000080] border-t border-blue-700 absolute left-0 right-0 z-50">
+    <nav className="px-4 py-4 space-y-3">
+      <MobileDropdownMenu 
+        data={{ title: "Products & solutions" }} 
+        isActive={mobileDropdowns.products} 
+        onToggle={() => toggleMobileDropdown('products')}
+        content={<MobileProductsContent />}
+      />
+      
+      <MobileDropdownMenu 
+        data={{ title: "For partners" }} 
+        isActive={mobileDropdowns.partners} 
+        onToggle={() => toggleMobileDropdown('partners')}
+        content={<MobilePartnersContent />}
+      />
+      
+      <MobileDropdownMenu 
+        data={{ title: "Helpdesk" }} 
+        isActive={mobileDropdowns.helpdesk} 
+        onToggle={() => toggleMobileDropdown('helpdesk')}
+        content={<MobileHelpdeskContent />}
+      />
+      
+      <MobileDropdownMenu 
+        data={{ title: "About Cyvica" }} 
+        isActive={mobileDropdowns.about} 
+        onToggle={() => toggleMobileDropdown('about')}
+        content={<MobileAboutContent />}
+      />
+      
+      <div className="pt-3 border-t border-blue-700 space-y-2">
+        <button className="block text-white hover:text-blue-400 py-2">Contact</button>
+        <button className="block text-white hover:text-blue-400 py-2">Log in</button>
+      </div>
+    </nav>
+  </div>
+)}
       </header>
 
       
