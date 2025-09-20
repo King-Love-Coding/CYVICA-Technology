@@ -1,9 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button"
 import { useState, useRef, useEffect } from "react"
-import logo from './Cyvica_Logo_Transparent.png';
-import Image from 'next/image';
-import { url } from "inspector";
+import Image from "next/image"
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -214,7 +212,7 @@ export default function Home() {
                       href="#" 
                       className="text-xs text-gray-700 hover:text-blue-600 transition-colors flex items-center py-2 px-2 rounded-md hover:bg-blue-50 group"
                     >
-                      <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3 group-hover:bg-blue-500 transition-colors flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3 group-hover:bg-blue-500 transition-colors flex-shrink-极"></span>
                       <span className="leading-tight">{item}</span>
                     </a>
                   </li>
@@ -226,7 +224,7 @@ export default function Home() {
         
         {/* Second row: Security, backup and compliance in 3 columns */}
         <div className="border-t border-gray-200 pt-8">
-          <h4 className="font-semibold text-gray-900 text-sm mb-6 flex items-center text-blue-800 px-2 py-1 bg-blue-50 rounded-md">
+          <h4 className="font-semibold text-gray-900 text极m mb-6 flex items-center text-blue-800 px-2 py-1 bg-blue-50 rounded-md">
             <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
             Security, backup and compliance
           </h4>
@@ -270,14 +268,14 @@ const PartnersDropdownMenu = ({ isActive }: { isActive: boolean }) => {
       style={{left: '-100%', transform: 'translateX(-20%)', maxHeight: '500px', overflowY: 'auto'}}
     >
       <div className="p-8 bg-gradient-to-r from-blue-50 to-indigo-50">
-        <div className="flex justify-between items-start">
+        <div className="dflex justify-between items-start">
           <div>
             <h3 className="text-3xl font-bold text-gray-900">For partners</h3>
             <p className="text-gray-700 mt-3 text-lg max-w-2xl">
               Work with a trusted cloud solutions provider dedicated to your success. Get the services and support you need to grow your managed services offering.
             </p>
           </div>
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-base">
+          <Button className="bg-blue-70 hover:bg-blue-700 text-white px-6 py-3 text-base">
             Become a partner
           </Button>
         </div>
@@ -299,7 +297,7 @@ const PartnersDropdownMenu = ({ isActive }: { isActive: boolean }) => {
                       href="#" 
                       className="text-xs text-gray-700 hover:text-blue-600 transition-colors flex items-center py-2 px-2 rounded-md hover:bg-blue-50 group"
                     >
-                      <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3 group-hover:bg-blue-500 transition-colors flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3 group-h极er:bg-blue-500 transition-colors flex-shrink-0"></span>
                       <span className="leading-tight">{item}</span>
                     </a>
                   </li>
@@ -341,7 +339,7 @@ const PartnersDropdownMenu = ({ isActive }: { isActive: boolean }) => {
               <a href="#" className="text-xs text-blue-600 hover:text-blue-800 font-medium mt-auto flex items-center">
                 Read stories 
                 <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-极7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </a>
             </div>
@@ -350,7 +348,7 @@ const PartnersDropdownMenu = ({ isActive }: { isActive: boolean }) => {
               <h4 className="font-semibold text-gray-900 text-sm mb-3 text-blue-800">
                 Events
               </h4>
-              <p className="text-xs text-gray-600 mb-3">
+              <p className="text-xs text-gray-极 mb-3">
                 Find here an ever-expanding database of various events for you to keep learning and networking.
               </p>
               <a href="#" className="text-xs text-blue-600 hover:text-blue-800 font-medium mt-auto flex items-center">
@@ -488,7 +486,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
       ref={dropdownRef}
       style={{left: '-250%', transform: 'translateX(-20%)', maxHeight: '500px', overflowY: 'auto'}}
     >
-      <div className="p-8 bg-gradient-to-r from-blue-50 to-indigo-50">
+      <div className="p-8 bg-gradient极o-r from-blue-50 to-indigo-50">
         <div className="flex justify-between items-start">
           <div>
             <h3 className="text-3xl font-bold text-gray-900">About</h3>
@@ -496,7 +494,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
               We're born in the cloud and dedicated to offering tailored support. We'll help you develop your business strategy, streamline your operations, reduce skills gaps and provide the very best cloud products and services.
             </p>
           </div>
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-base">
+          <Button className="bg-blue-600 hover:极blue-700 text-white px-6 py-3 text-base">
             Meet The Team
           </Button>
         </div>
@@ -528,7 +526,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
           
           {/* Awards */}
           <div className="mb-6">
-            <h4 className="font-semibold text-gray-900 text-lg mb-4 flex items-center text-blue-800">
+            <h4 className="font-semibold text-gray-900 text-lg mb-4极flex items-center text-blue-800">
               <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
               Awards
             </h4>
@@ -599,7 +597,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
       >
         <div className="p-4">
           <div className="text-sm text-gray-500 mb-2 font-medium">{title}</div>
-          <div className="h-px bg-gray-200 mb-3"></div>
+          <div className="h-p极 bg-gray-200 mb-3"></div>
           <div className="space-y-2">
             <a href="#" className="block text-gray-700 hover:text-blue-600 py-1 px-2 rounded hover:bg-gray-50 transition-colors">
               Option 1
@@ -810,7 +808,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
       component: (
         <div className="text-xl md:text-2xl font-bold">
           <span className="text-blue-500">G</span>
-          <span className="text-red-500">o</span>
+          <span className="text-red-500">极</span>
           <span className="text-yellow-500">o</span>
           <span className="text-blue-500">g</span>
           <span className="text-green-500">l</span>
@@ -873,7 +871,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
       title: "Microsoft consultations",
       icon: (
         <div className="w-12 md:w-16 h-12 md:h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
-          <div className="w-6 md:w-8 h-6 md:h-8 bg-[#3498db] rounded-full flex items-center justify-center">
+          <div className="w极 md:w-8 h-6 md:h-8 bg-[#3498db] rounded-full flex items-center justify-center">
             <div className="w-3 md:w-4 h-3 md:h-4 bg-white rounded-full"></div>
           </div>
         </div>
@@ -904,22 +902,24 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Header */}
-      <header className="bg-[#1b1c44] text-white relative z-50">
+      <header className="bg-[#1b1c44] text-white relative">
         <div className="container mx-auto px-2 py-3 flex items-center justify-between">
-          <div className="flex items-center space-x-4 md:space-x-8">
+          <div className="flex items-center space-x-2 md:space-x-4">
             <div className="flex items-center space-x-2">
-             <div className="relative flex-shrink-0" style={{ width: '190px', height: '100px',marginRight: '0px' }}>
-            <img
-              src="/images/Cyvica_Logo_Transparent.png"
-              alt="CYVICA Logo"
-              className="w-full h-full object-contain filter brightness-0 invert"  
-            />
-          </div>
-              <span className="text-xl font-bold">CYVICA TECHNOLOGY</span>
+             <div className="relative flex-shrink-0" style={{ width: '120px', height: '60px', marginRight: '0px' }}>
+                <Image
+                  src="/images/Cyvica_Logo_Transparent.png"
+                  alt="CYVICA Logo"
+                  width={120}
+                  height={60}
+                  className="w-full h-full object-contain filter brightness-0 invert"  
+                />
+              </div>
+              <span className="text-lg font-bold hidden sm:block">CYVICA TECHNOLOGY</span>
             </div>
-            <nav className="hidden lg:flex space-x-6 text-sm">
+            <nav className="hidden lg:flex space-x-4 text-sm">
               {/* Products Dropdown */}
               <div className="relative nav-item">
                 <div 
@@ -966,7 +966,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
                 >
                   Helpdesk
                   <svg 
-                    className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'helpdesk' ? 'rotate-180' : ''}`} 
+                    className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'helpdes极' ? 'rotate-180' : ''}`} 
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor"
@@ -1000,7 +1000,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
             </nav>
           </div>
           
-          <div className="flex items-center space-x-2 md:space-x-4 text-sm">
+          <div className="flex items-center space-x-2 md:space极4 text-sm">
             <button
               onClick={toggleSearch}
               className="hover:text-blue-400 p-2 rounded-full hover:bg-blue-700/20 transition-colors"
@@ -1017,7 +1017,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0极"
                 />
               </svg>
             </button>
@@ -1029,7 +1029,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
               Sign up
             </Button>
             <button
-              className="flex flex-col space-y-1 p-2"
+              className="lg:hidden flex flex-col space-y-1 p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
             >
@@ -1050,13 +1050,13 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
         {isSearchOpen && (
           <div className="absolute top-0 right-0 h-full bg-[#000080] border-l border-blue-700 z-50 w-80 max-w-[90vw]">
             <div className="flex items-center h-full px-4">
-              <div className="flex-1 flex items-center space-x-3">
-                <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex-1极flex items-center space-x-3">
+                <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="极 0 24 24">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 极 7 0 0114 0z"
                   />
                 </svg>
                 <input
@@ -1079,8 +1079,8 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
           </div>
         )}
 
-        {isMobileMenuOpen && (
-  <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-[#000080] z-50 pt-16 overflow-y-auto">
+         {isMobileMenuOpen && (
+  <div className="lg:hidden bg-[#000080] border-t border-blue-700 w-full fixed top-[84px] left-0 right-0 bottom-0 z-1000 overflow-y-auto">
     <nav className="px-4 py-4 space-y-3">
       <MobileDropdownMenu 
         data={{ title: "Products & solutions" }} 
@@ -1117,19 +1117,18 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
     </nav>
   </div>
 )}
-
       </header>
 
       
       {/* Hero Section */}
-      <section className="bg-[#000080] text-white py-12 md:py-20 relative overflow-hidden">
+      <section className="bg-[#000080] text-white py-8 md:py-20 relative overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
           style={{ backgroundImage: "url(/images/Hero.png)" }}
         ></div>
         <div className="container mx-auto px-4 flex items-center relative z-10">
           <div className="w-full md:w-1/2 pr-0 md:pr-8">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 md:mb-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 md:mb-8">
               Looking for <span className="text-white">more</span>
               <br />
               than a cloud
@@ -1150,9 +1149,9 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
       </section>
 
       {/* Partners Section */}
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-8 md:py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-8 md:mb-12">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6 md:mb-12">
             The right cloud solutions for your MSP
           </h2>
 
@@ -1162,7 +1161,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
             onMouseLeave={() => setIsPartnersHovered(false)}
           >
             <div
-              className="flex space-x-16 py-8"
+              className="flex space-x-8 md:space-x-16 py-4 md:py-8"
               style={{
                 animation: isPartnersHovered ? "none" : "scroll-left-single 15s linear infinite",
                 width: "fit-content",
@@ -1195,9 +1194,9 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
 
 
       {/* Services Section */}
-      <section className="py-12 md:py-16 bg-[#ecf0f1]">
+      <section className="py-8 md:py-16 bg-[#ecf0f1]">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-12 md:mb-16">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-16">
             Services to help you achieve more
           </h2>
 
@@ -1207,7 +1206,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
             onMouseLeave={() => setIsServicesHovered(false)}
           >
             <div
-              className="flex space-x-16 py-8"
+              className="flex space-x-8 md:space-x-16 py-4 md:py-8"
               style={{
                 animation: isServicesHovered ? "none" : "scroll-left-services-single 20s linear infinite",
                 width: "fit-content",
@@ -1218,7 +1217,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
                 <div key={service.id} className="flex-shrink-0 flex items-center justify-center">
                   <div className="text-center">
                     {service.icon}
-                    <h3 className="font-bold text-gray-800 text-sm md:text-base">{service.title}</h3>
+                    <h3 className="font-bold text-gray-800 text-xs sm:text-sm md:text-base">{service.title}</h3>
                   </div>
                 </div>
               ))}
@@ -1240,211 +1239,155 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
       </section>
 
       {/* What You Get Section */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-12 md:mb-16">
-            What you get when you work with us
-          </h2>
+      <section className="py-12 md:py-20 bg-white">
+  <div className="container mx-auto px-4">
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-16">
+      What you get when you work with us
+    </h2>
 
-          <div className="flex flex-col lg:flex-row items-center mb-16 md:mb-20">
-            <div className="w-full lg:w-1/2 pr-0 lg:pr-16 mb-8 lg:mb-0">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 md:mb-6">A partner you can trust</h3>
-              <p className="text-gray-600 mb-4 md:mb-6 leading-relaxed">
-                Count on a business partner that will go the extra mile to help you bring your MSP to the next level.
-              </p>
-              <ul className="space-y-3 md:space-y-4">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#3498db] rounded-full mr-3 md:mr-4 mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-sm md:text-base">
-                    An account manager dedicated to your success
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#3498db] rounded-full mr-3 md:mr-4 mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-sm md:text-base">
-                    Ongoing support to make the most of our marketplace
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#3498db] rounded-full mr-3 md:mr-4 mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-sm md:text-base">
-                    Personalized tactics to increase your bottom line
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div className="w-full lg:w-1/2">
-              <div className="w-full h-60 md:h-80 bg-gradient-to-br from-[#e8f4fd] to-[#b3d9f2] rounded-2xl relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative">
-                    <div className="w-32 h-20 bg-[#3498db] rounded-full opacity-30 absolute top-8"></div>
-                    <div className="w-24 h-24 bg-[#e74c3c] rounded-full opacity-40 absolute top-4 right-8"></div>
-                    <div className="w-20 h-20 bg-[#2c3e50] rounded-full absolute bottom-8 left-4"></div>
-                    <div className="w-16 h-8 bg-[#f39c12] rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col lg:flex-row items-center mb-16 md:mb-20">
-            <div className="w-full lg:w-1/2 pr-0 lg:pr-16 order-2 lg:order-1">
-              <div className="w-full h-60 md:h-80 bg-gradient-to-br from-[#fdf2e9] to-[#f8d7da] rounded-2xl relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative">
-                    <div className="grid grid-cols-3 gap-4">
-                      {Array.from({ length: 9 }).map((_, i) => (
-                        <div
-                          key={i}
-                          className="w-16 h-16 bg-white/60 rounded-lg flex items-center justify-center shadow-sm"
-                        >
-                          {i === 4 ? (
-                            <div className="w-8 h-8 bg-[#3498db] rounded-lg"></div>
-                          ) : (
-                            <div className="w-6 h-6 bg-[#95a5a6] rounded"></div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-full lg:w-1/2 pl-0 lg:pl-16 order-1 lg:order-2 mb-8 lg:mb-0">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 md:mb-6">Streamlined operations</h3>
-              <p className="text-gray-600 mb-4 md:mb-6 leading-relaxed">
-                Get the peace of mind to plan clients while keeping things simple with a suite of cloud solutions
-                delivered through a unique platform.
-              </p>
-              <ul className="space-y-3 md:space-y-4">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#3498db] rounded-full mr-3 md:mr-4 mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-sm md:text-base">
-                    Efficient provisioning to improve client experience
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#3498db] rounded-full mr-3 md:mr-4 mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-sm md:text-base">Centralized invoicing to simplify billing</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#3498db] rounded-full mr-3 md:mr-4 mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-sm md:text-base">Vendor relationships managed for you</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="flex flex-col lg:flex-row items-center">
-            <div className="w-full lg:w-1/2 pr-0 lg:pr-16 mb-8 lg:mb-0">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 md:mb-6">An entire team by your side</h3>
-              <p className="text-gray-600 mb-4 md:mb-6 leading-relaxed">
-                Rely on a team of passionate cloud experts who are fully engaged in getting the job done and solving
-                your business challenges—from presales to helpdesk.
-              </p>
-              <ul className="space-y-3 md:space-y-4">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#3498db] rounded-full mr-3 md:mr-4 mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-sm md:text-base">
-                    Official technical operations to free up time and resources
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#3498db] rounded-full mr-3 md:mr-4 mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-sm md:text-base">Extend your cloud expertise efficiently</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#3498db] rounded-full mr-3 md:mr-4 mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 text-sm md:text-base">Get the help you need, when you need it</span>
-                </li>
-              </ul>
-            </div>
-            <div className="w-full lg:w-1/2">
-              <div className="w-full h-60 md:h-80 bg-gradient-to-br from-[#e8f4fd] to-[#3498db] rounded-2xl relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative">
-                    <div className="w-32 h-6 bg-[#e74c3c] transform skew-x-12 absolute bottom-16"></div>
-                    <div className="w-28 h-6 bg-[#f39c12] transform -skew-x-12 absolute bottom-12 left-8"></div>
-                    <div className="w-24 h-6 bg-[#3498db] transform skew-x-12 absolute bottom-8 left-4"></div>
-
-                    <div className="absolute bottom-20 left-12 w-6 h-12 bg-[#e74c3c] rounded-t-full"></div>
-                    <div className="absolute bottom-20 right-12 w-6 h-12 bg-[#2c3e50] rounded-t-full"></div>
-                    <div className="absolute bottom-16 left-20 w-6 h-12 bg-[#f39c12] rounded-t-full"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    {/* First Row - A partner you can trust */}
+    <div className="flex flex-col lg:flex-row items-center mb-12 md:mb-20">
+      <div className="w-full lg:w-1/2 pr-0 lg:pr-8 mb-6 lg:mb-0">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-6">A partner you can trust</h3>
+        <p className="text-gray-600 mb-3 md:mb-6 leading-relaxed text-sm sm:text-base">
+          Count on a business partner that will go the extra mile to help you bring your MSP to the next level.
+        </p>
+        <ul className="space-y-2 md:space-y-4">
+          <li className="flex items-start">
+            <div className="w-2 h-2 bg-[#3498db] rounded-full mr-2 md:mr-4 mt-2 flex-shrink-0"></div>
+            <span className="text-gray-700 text-xs sm:text-sm md:text-base">
+              An account manager dedicated to your success
+            </span>
+          </li>
+          <li className="flex items-start">
+            <div className="w-2 h-2 bg-[#3498db] rounded-full mr-2 md:mr-4 mt-2 flex-shrink-0"></div>
+            <span className="text-gray-700 text-xs sm:text-sm md:text-base">
+              Ongoing support to make the most of our marketplace
+            </span>
+          </li>
+          <li className="flex items-start">
+            <div className="w-2 h-2 bg-[#3498db] rounded-full mr-2 md:mr-4 mt-2 flex-shrink-0"></div>
+            <span className="text-gray-700 text-xs sm:text-sm md:text-base">
+              Personalized tactics to increase your bottom line
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div className="w-full lg:w-1/2">
+        <div className="relative w-full h-48 sm:h-60 md:h-80 rounded-xl md:rounded-2xl overflow-hidden">
+          <Image 
+            src="/images/Cloud-Work.jpg" 
+            alt="Trusted business partner" 
+            fill
+            className="object-cover"
+          />
         </div>
-      </section>
+      </div>
+    </div>
 
-      {/* Testimonials Section */}
-      {/* <section className="py-16 md:py-20 bg-[#ecf0f1]">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-12 md:mb-16">
-            Why MSPs partner with us
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <Card className="p-6 md:p-8 bg-white shadow-sm">
-              <p className="text-gray-600 mb-6 md:mb-8 leading-relaxed text-sm">
-                "Sherweb does a great job of being accessible to us MSP partners. I feel I have somebody I can always
-                reach out to when I need help navigating the world of cloud signing on."
-              </p>
-              <div className="border-t pt-4 md:pt-6">
-                <p className="font-bold text-gray-800">Bryan Bagley</p>
-                <p className="text-sm text-gray-500">President & Owner</p>
-                <p className="text-sm text-gray-500">Bagley</p>
-              </div>
-            </Card>
-            <Card className="p-6 md:p-8 bg-white shadow-sm">
-              <p className="text-gray-600 mb-6 md:mb-8 leading-relaxed text-sm">
-                "Sherweb allowed us to grow our monthly recurring revenue over the last 5 years."
-              </p>
-              <div className="border-t pt-4 md:pt-6">
-                <p className="font-bold text-gray-800">Mark A. Correia</p>
-                <p className="text-sm text-gray-500">President</p>
-                <p className="text-sm text-gray-500">Teknologik</p>
-              </div>
-            </Card>
-            <Card className="p-6 md:p-8 bg-white shadow-sm">
-              <p className="text-gray-600 mb-6 md:mb-8 leading-relaxed text-sm">
-                "Sherweb has been instrumental in accelerating our growth by providing innovative solutions and support
-                that have enhanced our business for years opportunities."
-              </p>
-              <div className="border-t pt-4 md:pt-6">
-                <p className="font-bold text-gray-800">Todd Swanzy</p>
-                <p className="text-sm text-gray-500">CEO</p>
-                <p className="text-sm text-gray-500">Swanzy Technologies</p>
-              </div>
-            </Card>
-          </div>
+    {/* Second Row - Streamlined operations */}
+    <div className="flex flex-col lg:flex-row items-center mb-12 md:mb-20">
+      {/* Content Section (Left on desktop, First on mobile) */}
+      <div className="w-full lg:w-1/2 lg:pr-8 mb-6 lg:mb-0 order-2 lg:order-1">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-6">Streamlined operations</h3>
+        <p className="text-gray-极 mb-3 md:mb-6 leading-relaxed text-sm sm:text-base">
+          Get the peace of mind to plan clients while keeping things simple with a suite of cloud solutions
+          delivered through a unique platform.
+        </p>
+        <ul className="space-y-2 md:space-y-4">
+          <li className="flex items-start">
+            <div className="w-2 h-2 bg-[#3498db] rounded-full mr-2 md:mr-4 mt-2 flex-shrink-0"></div>
+            <span className="text-gray-700 text-xs sm:text-sm md:text-base">
+              Efficient provisioning to improve client experience
+            </span>
+          </li>
+          <li className="flex items-start">
+            <div className="w-2 h-2 bg-[#3498db] rounded-full mr-2 md:mr-4 mt-2 flex-shrink-0"></div>
+            <span className="text-gray-700 text-xs sm:text-sm md:text-base">Centralized invoicing to simplify billing</span>
+          </li>
+          <li className="flex items-start">
+            <div className="w-2 h-2 bg-[#3498db] rounded-full mr-2 md:mr-4 mt-2 flex-shrink-0"></div>
+            <span className="text-gray-700 text-xs sm:text-sm md:text-base">Vendor relationships managed for you</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Image Section (Right on desktop, Second on mobile) */}
+      <div className="w-full lg:w-1/2 order-1 lg:order-2 mb-6 lg:mb-0">
+        <div className="relative w-full h-48 sm:h-60 md:h-80 rounded-xl md:rounded-2xl overflow-hidden">
+          <Image 
+            src="/images/Cloud-Computing.jpg" 
+            alt="Streamlined operations visualization" 
+            fill
+            className="object-cover"
+          />
         </div>
-      </section> */}
+      </div>
+    </div>
+
+    {/* Third Row - An entire team by your side */}
+    <div className="flex flex-col lg:flex-row items-center">
+      <div className="w-full lg:w-1/2 pr-0 lg:pr-8 mb-6 lg:mb-0">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-6">An entire team by your side</h3>
+        <p className="text-gray-600 mb-3 md:mb-6 leading-relaxed text-sm sm:text-base">
+          Rely on a team of passionate cloud experts who are fully engaged in getting the job done and solving
+          your business challenges—from presales to helpdesk.
+        </p>
+        <ul className="space-y-2 md:space-y-4">
+          <li className="flex items-start">
+            <div className="w-2 h-2 bg-[#3498db] rounded-full mr-2 md:mr-4 mt-2 flex-shrink-0"></div>
+            <span className="text-gray-700 text-xs sm:text-sm md:text-base">
+              Official technical operations to free up time and resources
+            </span>
+          </li>
+          <li className="flex items-start">
+            <div className="w-2 h-2 bg-[#3498db] rounded-full mr-2 md:mr-4 mt-2 flex-shrink-0"></div>
+            <span className="text-gray-700 text-xs sm:text-sm md:text-base">Extend your cloud expertise efficiently</span>
+          </li>
+          <li className="flex items-start">
+            <div className="w-2极-2 bg-[#3498db] rounded-full mr-2 md:mr-4 mt-2 flex-shrink-0"></div>
+            <span className="text-gray-700 text-xs sm:text-sm md:text-base">Get the help you need, when you need it</span>
+          </li>
+        </ul>
+      </div>
+      <div className="w-full lg:w-1/2">
+        <div className="relative w-full h-48 sm:h-60 md:h-80 rounded-xl md:rounded-2xl overflow-hidden">
+          <Image 
+            src="/images/Entire-Team.jpg" 
+            alt="Team collaboration" 
+            fill
+            className="object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Footer */}
-      <footer className="bg-[#2c3e50] text-white py-12 md:py-16">
+      <footer className="bg-[#2c3e50] text-white py-8 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8 md:mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 mb-6 md:mb-12">
             {/* Brand section - always visible */}
             <div className="lg:col-span-1">
-              <div className="flex items-center space-x-2 mb-4 md:mb-6">
+              <div className="flex items-center space-x-2 mb-3 md:mb-6">
                 <div className="w-6 h-6 bg-[#3498db] rounded-sm"></div>
                 <span className="text-xl font-bold">CYVICA</span>
               </div>
-              <p className="text-gray-300 text-sm leading-relaxed mb-4 md:mb-6">
+              <p className="text-gray-300 text-sm leading-relaxed mb-3 md:mb-6">
                 The cloud marketplace built for MSPs. Get the right cloud solutions for your business.
               </p>
-              <div className="flex space-x-4">
-                <div className="w-8 h-8 bg-[#3b5998] rounded flex items-center justify-center">
+              <div className="flex space-x-3">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[bf5998] rounded flex items-center justify-center">
                   <span className="text-white text-xs font-bold">f</span>
                 </div>
-                <div className="w-8 h-8 bg-[#1da1f2] rounded flex items-center justify-center">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#1da1f2] rounded flex items-center justify-center">
                   <span className="text-white text-xs font-bold">t</span>
                 </div>
-                <div className="w-8 h-8 bg-[#0077b5] rounded flex items-center justify-center">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-[#0077b5] rounded flex items-center justify-center">
                   <span className="text-white text-xs font-bold">in</span>
                 </div>
-                <div className="w-8 h-8 bg-[#ff0000] rounded flex items-center justify-center">
+                <div className="w-极 h-6 sm:w-8 sm:h-8 bg-[#ff0000] rounded flex items-center justify-center">
                   <span className="text-white text-xs font-bold">▶</span>
                 </div>
               </div>
@@ -1453,7 +1396,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
             {/* Products & Solutions - Accordion on mobile, static on desktop */}
             <div>
               <button
-                className="md:hidden w-full flex items-center justify-between font-bold text-white mb-4 py-2 border-b border-gray-600"
+                className="md:hidden w-full flex items-center justify-between font-bold text-white mb-3 py-2 border-b border-gray-600"
                 onClick={() => toggleAccordion("products")}
               >
                 <span>Products & solutions</span>
@@ -1467,7 +1410,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
                 </svg>
               </button>
 
-              <h3 className="hidden md:block font-bold text-white mb-4">Products & solutions</h3>
+              <h3 className="hidden md:block font-bold text-white mb-3">Products & solutions</h3>
 
               <ul
                 className={`space-y-2 text-sm text-gray-300 transition-all duration-300 overflow-hidden ${
@@ -1510,7 +1453,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
             {/* Services - Accordion on mobile, static on desktop */}
             <div>
               <button
-                className="md:hidden w-full flex items-center justify-between font-bold text-white mb-4 py-2 border-b border-gray-600"
+                className="md:hidden w-full flex items-center justify-between font-bold text-white mb-3 py-2 border-b border-gray-600"
                 onClick={() => toggleAccordion("services")}
               >
                 <span>Services</span>
@@ -1524,7 +1467,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
                 </svg>
               </button>
 
-              <h3 className="hidden md:block font-bold text-white mb-4">Services</h3>
+              <h3 className="hidden md:block font-bold text-white mb-3">Services</h3>
 
               <ul
                 className={`space-y-2 text-sm text-gray-300 transition-all duration-300 overflow-hidden ${
@@ -1562,7 +1505,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
             {/* Resources - Accordion on mobile, static on desktop */}
             <div>
               <button
-                className="md:hidden w-full flex items-center justify-between font-bold text-white mb-4 py-2 border-b border-gray-600"
+                className="md:hidden w-full flex items-center justify-between font-bold text-white mb-3 py-2 border-b border-gray-600"
                 onClick={() => toggleAccordion("resources")}
               >
                 <span>Resources</span>
@@ -1576,7 +1519,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
                 </svg>
               </button>
 
-              <h3 className="hidden md:block font-bold text-white mb-4">Resources</h3>
+              <h3 className="hidden md:block font-bold text-white mb-3">Resources</h3>
 
               <ul
                 className={`space-y-2 text-sm text-gray-300 transition-all duration-300 overflow-hidden ${
@@ -1619,7 +1562,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
             {/* Company - Accordion on mobile, static on desktop */}
             <div>
               <button
-                className="md:hidden w-full flex items-center justify-between font-bold text-white mb-4 py-2 border-b border-gray-600"
+                className="md:hidden w-full flex items-center justify-between font-bold text-white mb-3极y-2 border-b border-gray-600"
                 onClick={() => toggleAccordion("company")}
               >
                 <span>Company</span>
@@ -1633,7 +1576,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
                 </svg>
               </button>
 
-              <h3 className="hidden md:block font-bold text-white mb-4">Company</h3>
+              <h3 className="hidden md:block font-bold text-white mb-3">Company</h3>
 
               <ul
                 className={`space-y-2 text-sm text-gray-300 transition-all duration-300 overflow-hidden ${
@@ -1674,9 +1617,9 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
             </div>
           </div>
 
-          <div className="border-t border-gray-600 pt-6 md:pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <div className="flex flex-wrap justify-center md:justify-start space-x-4 md:space-x-6 text-sm text-gray-300">
+          <div className="border-t border-gray-600 pt-4 md:pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
+              <div className="flex flex-wrap justify-center md:justify-start space-x-3 md:space-x-6 text-xs sm:text-sm text-gray-300">
                 <a href="#" className="hover:text-white">
                   Privacy policy
                 </a>
@@ -1690,7 +1633,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
                   Accessibility
                 </a>
               </div>
-              <div className="text-sm text-gray-300">© 2025 CYVICA Inc. All rights reserved.</div>
+              <div className="text-xs sm:text-sm text-gray-300">© 2025 CYVICA Inc. All rights reserved.</div>
             </div>
           </div>
         </div>
