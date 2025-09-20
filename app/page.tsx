@@ -1238,8 +1238,8 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
         </div>
       </section>
 
-      {/* What You Get Section */}
-      <section className="py-12 md:py-20 bg-white">
+     {/* What You Get Section */}
+<section className="py-12 md:py-20 bg-white">
   <div className="container mx-auto px-4">
     <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-16">
       What you get when you work with us
@@ -1285,45 +1285,45 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
       </div>
     </div>
 
-    {/* Second Row - Streamlined operations */}
-    <div className="flex flex-col lg:flex-row items-center mb-12 md:mb-20">
-      {/* Content Section (Left on desktop, First on mobile) */}
-      <div className="w-full lg:w-1/2 lg:pr-8 mb-6 lg:mb-0 order-2 lg:order-1">
-        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-6">Streamlined operations</h3>
-        <p className="text-gray-极 mb-3 md:mb-6 leading-relaxed text-sm sm:text-base">
-          Get the peace of mind to plan clients while keeping things simple with a suite of cloud solutions
-          delivered through a unique platform.
-        </p>
-        <ul className="space-y-2 md:space-y-4">
-          <li className="flex items-start">
-            <div className="w-2 h-2 bg-[#3498db] rounded-full mr-2 md:mr-4 mt-2 flex-shrink-0"></div>
-            <span className="text-gray-700 text-xs sm:text-sm md:text-base">
-              Efficient provisioning to improve client experience
-            </span>
-          </li>
-          <li className="flex items-start">
-            <div className="w-2 h-2 bg-[#3498db] rounded-full mr-2 md:mr-4 mt-2 flex-shrink-0"></div>
-            <span className="text-gray-700 text-xs sm:text-sm md:text-base">Centralized invoicing to simplify billing</span>
-          </li>
-          <li className="flex items-start">
-            <div className="w-2 h-2 bg-[#3498db] rounded-full mr-2 md:mr-4 mt-2 flex-shrink-0"></div>
-            <span className="text-gray-700 text-xs sm:text-sm md:text-base">Vendor relationships managed for you</span>
-          </li>
-        </ul>
-      </div>
+   {/* Second Row - Streamlined operations */}
+<div className="flex flex-col lg:flex-row items-center mb-12 md:mb-20">
+  {/* Content Section (Left on mobile, Right on desktop) */}
+  <div className="w-full lg:w-1/2 lg:pr-8 mb-6 lg:mb-0 order-1 lg:order-2">
+    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-3 md:ml-36">Streamlined operations</h3>
+    <p className="text-gray-600 mb-3 md:ml-36 leading-relaxed text-sm sm:text-base">
+      Get the peace of mind to plan clients while keeping things simple with a suite of cloud solutions
+      delivered through a unique platform.
+    </p>
+    <ul className="space-y-2 md:space-y-4">
+      <li className="flex items-start">
+        <div className="w-2 h-2 bg-[#3498db] rounded-full mr-2 md:ml-36 mt-2 flex-shrink-0"></div>
+        <span className="text-gray-700 text-xs sm:text-sm md:text-base">
+          Efficient provisioning to improve client experience
+        </span>
+      </li>
+      <li className="flex items-start">
+        <div className="w-2 h-2 bg-[#3498db] rounded-full mr-2 md:ml-36 mt-2 flex-shrink-0"></div>
+        <span className="text-gray-700 text-xs sm:text-sm md:text-base">Centralized invoicing to simplify billing</span>
+      </li>
+      <li className="flex items-start">
+        <div className="w-2 h-2 bg-[#3498db] rounded-full mr-2 md:ml-36 mt-2 flex-shrink-0"></div>
+        <span className="text-gray-700 text-xs sm:text-sm md:text-base">Vendor relationships managed for you</span>
+      </li>
+    </ul>
+  </div>
 
-      {/* Image Section (Right on desktop, Second on mobile) */}
-      <div className="w-full lg:w-1/2 order-1 lg:order-2 mb-6 lg:mb-0">
-        <div className="relative w-full h-48 sm:h-60 md:h-80 rounded-xl md:rounded-2xl overflow-hidden">
-          <Image 
-            src="/images/Cloud-Computing.jpg" 
-            alt="Streamlined operations visualization" 
-            fill
-            className="object-cover"
-          />
-        </div>
-      </div>
+  {/* Image Section (Right on mobile, Left on desktop) */}
+  <div className="w-full lg:w-1/2 order-2 lg:order-1 mb-6 lg:mb-0 lg:-ml-12">
+    <div className="relative w-full h-48 sm:h-60 md:h-80 rounded-xl md:rounded-2xl overflow-hidden">
+      <Image 
+        src="/images/Cloud-Computing.jpg" 
+        alt="Streamlined operations visualization" 
+        fill
+        className="object-cover"
+      />
     </div>
+  </div>
+</div>
 
     {/* Third Row - An entire team by your side */}
     <div className="flex flex-col lg:flex-row items-center">
@@ -1345,7 +1345,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
             <span className="text-gray-700 text-xs sm:text-sm md:text-base">Extend your cloud expertise efficiently</span>
           </li>
           <li className="flex items-start">
-            <div className="w-2极-2 bg-[#3498db] rounded-full mr-2 md:mr-4 mt-2 flex-shrink-0"></div>
+            <div className="w-2 h-2 bg-[#3498db] rounded-full mr-2 md:mr-4 mt-2 flex-shrink-0"></div>
             <span className="text-gray-700 text-xs sm:text-sm md:text-base">Get the help you need, when you need it</span>
           </li>
         </ul>
@@ -1471,7 +1471,7 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
 
               <ul
                 className={`space-y-2 text-sm text-gray-300 transition-all duration-300 overflow-hidden ${
-                  footerAccordions.services ? "max-h-96 opacity-100" : "max-h-0 opacity-0 md:max-h-none md:opacity-100"
+                  footerAccordions.services ? "max-h-96 opacity-100" : "max-h-0 opacity-0 md:mx-h-none md:opacity-100"
                 }`}
               >
                 <li>
