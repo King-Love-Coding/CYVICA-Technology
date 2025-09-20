@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button"
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
+import Link from 'next/link';
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -1022,12 +1023,17 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
               </svg>
             </button>
             <button className="hover:text-blue-400 hidden sm:block">Contact</button>
-            <button className="hover:text-blue-400 hidden sm:block border border-white px-3 py-1 rounded">
-              Log in
-            </button>
-            <Button className="bg-[#e74c3c] hover:bg-[#c0392b] text-white px-3 md:px-4 py-2 rounded text-xs md:text-sm font-medium">
-              Sign up
-            </Button>
+            <Link href="/login" passHref>
+  <button className="hover:text-blue-400 hidden sm:block border border-white px-3 py-1 rounded">
+    Log in
+  </button>
+</Link>
+            <Link href="/signup" passHref>
+  <Button className="bg-[#e74c3c] hover:bg-[#c0392b] text-white px-3 md:px-4 py-2 rounded text-xs md:text-sm font-medium">
+    Sign up
+  </Button>
+</Link>
+
             <button
               className="lg:hidden flex flex-col space-y-1 p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
