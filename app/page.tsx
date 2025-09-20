@@ -1456,57 +1456,62 @@ const AboutDropdownMenu = ({ isActive }: { isActive: boolean }) => {
               </ul>
             </div>
 
-            {/* Services - Accordion on mobile, static on desktop */}
-            <div>
-              <button
-                className="md:hidden w-full flex items-center justify-between font-bold text-white mb-3 py-2 border-b border-gray-600"
-                onClick={() => toggleAccordion("services")}
-              >
-                <span>Services</span>
-                <svg
-                  className={`w-5 h-5 transition-transform duration-200 ${footerAccordions.services ? "rotate-180" : ""}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
+  {/* Services - Accordion on mobile, static on desktop */}
+<div>
+  <button
+    className="md:hidden w-full flex items-center justify-between font-bold text-white mb-3 py-2 border-b border-gray-600"
+    onClick={() => toggleAccordion("services")}
+  >
+    <span>Services</span>
+    <svg
+      className={`w-5 h-5 transition-transform duration-200 ${
+        footerAccordions.services ? "rotate-180" : ""
+      }`}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
 
-              <h3 className="hidden md:block font-bold text-white mb-3">Services</h3>
+  <h3 className="hidden md:block font-bold text-white mb-3">Services</h3>
 
-              <ul
-                className={`space-y-2 text-sm text-gray-300 transition-all duration-300 overflow-hidden ${
-                  footerAccordions.services ? "max-h-96 opacity-100" : "max-h-0 opacity-0 md:mx-h-none md:opacity-100"
-                }`}
-              >
-                <li>
-                  <a href="#" className="hover:text-white">
-                    White-label helpdesk
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    NOC services
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Microsoft consultations
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    MDR for M365
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    MDF consultations
-                  </a>
-                </li>
-              </ul>
-            </div>
+  <ul
+    className={`space-y-2 text-sm text-gray-300 transition-all duration-300 overflow-hidden ${
+      footerAccordions.services
+        ? "max-h-96 opacity-100"
+        : "max-h-0 opacity-0 md:max-h-none md:opacity-100"
+    }`}
+  >
+    <li>
+      <a href="#" className="hover:text-white">
+        White-label helpdesk
+      </a>
+    </li>
+    <li>
+      <a href="#" className="hover:text-white">
+        NOC services
+      </a>
+    </li>
+    <li>
+      <a href="#" className="hover:text-white">
+        Microsoft consultations
+      </a>
+    </li>
+    <li>
+      <a href="#" className="hover:text-white">
+        MDR for M365
+      </a>
+    </li>
+    <li>
+      <a href="#" className="hover:text-white">
+        MDF consultations
+      </a>
+    </li>
+  </ul>
+</div>
+  
 
             {/* Resources - Accordion on mobile, static on desktop */}
             <div>
